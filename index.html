@@ -1,16 +1,83 @@
-<html>
-	<head>
-		
-	</head>
+<!DOCTYPE html>
+<head>
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include jQuery Mobile stylesheets -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Include the jQuery library -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Include the jQuery Mobile library -->
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
 	<body>	
 		<!--un data rol es un atributo personalizado compatible con html5, su sintaxis es "data-" y es lo que la hace
 		platarforma de desarrollo,  -->
-		
+		<div data-role="page" id="pagina1">
+			<!--Cabecera-->
+			<div data-role="header" data-theme="b" data-position="fixed">
+				<h1>Botones </h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="" >1</a></li>
+						<li><a href="segundo.php" data-transition= "Slide" >2</a></li>
+						<li><a href="tres.php" data-transition= "Slide" >3</a></li>
+						<li><a href="cuatro.php" data-transition= "Slide" >4</a></li>
+						<li><a href="cinco.php" data-transition= "Slide" >5</a></li>
+					</ul>
+				</div>	
+			</div>	
 
-		<h1>Hola mundo</h1>
+
+			<!--Contenido-->
+			<div data-role="content" data-theme="a" >
+				<form action="" method="">
+					<label for="nombre">Nombre</label>
+					<input type="text" name="nombre" id="nombre" placeholder="Ejemplo: Miguel">
+
+					<label for="correo">Correo</label>
+					<input type="email" name="correo" id="correo" placeholder="Ejemplo: mgelistat@hotmail.com">
+
+					<label for="descripcion">Descripcion</label>
+					<textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+
+					<fieldset data-role="controlgroup">
+						<legend>Paises</legend>
+						<select name="latinoamerica" id="latinoamerica" data-native-menu="false">
+							<option value="">Paises de Latinoamerica</option>
+							<option value="1">Argentina</option>
+							<option value="2">Bolivia</option>
+							<option value="3">Colombia</option>
+							<option value="4">Mexico</option>
+							<option value="5">Venezuela</option>
+						</select>
+
+						<select name="europa" id="europa" data-native-menu="false">
+							<option value="">Paises de Europa</option>
+							<option value="1">Francia</option>
+							<option value="2">Inglaterra</option>
+							<option value="3">Italia</option>
+							<option value="4">Portugal</option>
+							<option value="5">Alemania</option>
+						</select>
+					</fieldset>
+
+
+					<label for="sexo">Sexo</label>
+					<select name="sexo" id="sexo" data-native-menu="false" data-role="slider">
+							<option value="m">M</option>
+							<option value="f">F</option>
+						</select>
+					
+
+				</form>
+			</div>
+
+
 			<!--Pie de pagina-->
-			
-		
+			<div data-role="footer" data-theme="b" class="ui-bar" data-position="fixed" data-id='piefijo'>
+				<h1>pie de pagina</h1>				
+			</div>
+		</div>
 
 
 	</body>
